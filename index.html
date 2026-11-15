@@ -4,6 +4,14 @@
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
 <title>ENTERA Therapeutics</title>
+<!-- Google Tag Manager -->
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+  (function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src='https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);})(window,document,'script','dataLayer','GTM-58MWMPZ7');
+</script>
+<!-- End Google Tag Manager -->
 <meta name="description" content="ENTERA Therapeutics: a science-driven healthcare company specialising in Gastroenterology, Hepatology and Clinical Nutrition. A Quest to Heal Every Life.">
 <meta name="theme-color" content="#11A391">
 <!-- Link previews (WhatsApp, Facebook, LinkedIn, X). og-image.jpg must be in the site root: https://enteratherapeutics.com/og-image.jpg -->
@@ -645,6 +653,9 @@ nav.menu>a,nav.menu .dd>button{padding:10px 12px}
 </head>
 <body>
 
+<!-- Google Tag Manager (noscript) -->
+<noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-58MWMPZ7" height="0" width="0" style="display:none;visibility:hidden" title="Google Tag Manager"></iframe></noscript>
+<!-- End Google Tag Manager (noscript) -->
 
 <svg width="0" height="0" style="position:absolute" aria-hidden="true">
   <symbol id="i-arrow" viewBox="0 0 24 24"><path d="M5 12h14M13 6l6 6-6 6" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></symbol>
@@ -1167,7 +1178,7 @@ nav.menu>a,nav.menu .dd>button{padding:10px 12px}
         <h2 class="h2">Make an <span style="color:var(--orange)">Enquiry</span></h2>
         <p>For product information, scientific collaboration or partnership enquiries, send us a message or reach our team directly.</p>
         <ul class="cinfo">
-          <li><i><svg><use href="#i-phone"/></svg></i><div><b>Phone</b><a href="tel:+919746219009">+91 97462 19009</a><br><a href="tel:+919605003603">+91 96050 03603</a></div></li>
+          <li><i><svg><use href="#i-phone"/></svg></i><div><b>Phone</b><a href="tel:+919746219009">+91 97462 19009</a><br><a href="tel:+918590469949">+91 85904 69949</a></div></li>
           <li><i><svg><use href="#i-mail"/></svg></i><div><b>Email</b><a href="mailto:sales@enteratherapeutics.com">sales@enteratherapeutics.com</a><br><a href="mailto:entera.india@gmail.com">entera.india@gmail.com</a></div></li>
           <li><i><svg><use href="#i-pin"/></svg></i><div><b>Registered office</b><span>6/30C, 1st Floor, Periyathottam Colony, 4th Street, Veerakeralam, Coimbatore 641007, Tamil Nadu, India</span></div></li>
         </ul>
@@ -1197,7 +1208,7 @@ nav.menu>a,nav.menu .dd>button{padding:10px 12px}
     <div><h4>Contact</h4><div class="fcontact">
       <span>6/30C, 1st Floor, Periyathottam Colony, 4th Street, Veerakeralam, Coimbatore 641007, Tamil Nadu</span>
       <span><a href="mailto:sales@enteratherapeutics.com">sales@enteratherapeutics.com</a><br><a href="mailto:entera.india@gmail.com">entera.india@gmail.com</a></span>
-      <span><a href="tel:+919746219009">+91 97462 19009</a> · <a href="tel:+919605003603">+91 96050 03603</a></span>
+      <span><a href="tel:+919746219009">+91 97462 19009</a> · <a href="tel:+918590469949">+91 85904 69949</a></span>
     </div></div>
   </div>
   <div class="fbase"><div class="wrap">
@@ -1267,6 +1278,7 @@ nav.menu>a,nav.menu .dd>button{padding:10px 12px}
       curView=v;
       $$('.view').forEach(el=>{const on=el.dataset.view===v;el.hidden=!on;el.classList.toggle('enter',on);});
       document.title='ENTERA Therapeutics'+(PAGES[v]?' · '+PAGES[v]:'');
+      if(window.__routed){(window.dataLayer=window.dataLayer||[]).push({event:'virtual_page_view',page_path:location.pathname+location.hash,page_location:location.href,page_title:document.title});}window.__routed=true;
       if(v==='home'){clearInterval(timer);restart();}else clearInterval(timer);
       const view=$(`.view[data-view="${v}"]`);
       if(v!=='home'||!h){window.scrollTo(0,0);}
@@ -1314,7 +1326,7 @@ nav.menu>a,nav.menu .dd>button{padding:10px 12px}
     btn.disabled=true;const label=btn.firstChild.textContent;btn.firstChild.textContent='Sending… ';note.textContent='Sending your enquiry…';
     try{
       await fetch(SHEET_URL,{method:'POST',mode:'no-cors',body:data});
-      f.reset();note.textContent='Thank you. Your enquiry has been received and our team will get back to you soon.';
+      (window.dataLayer=window.dataLayer||[]).push({event:'enquiry_submit',enquiry_type:$('#f-type').value});f.reset();note.textContent='Thank you. Your enquiry has been received and our team will get back to you soon.';
     }catch(err){
       note.textContent='Your enquiry could not be sent. '+FALLBACK;note.classList.add('err');
     }finally{btn.disabled=false;btn.firstChild.textContent=label;}
