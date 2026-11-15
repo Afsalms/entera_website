@@ -1314,7 +1314,7 @@ nav.menu>a,nav.menu .dd>button{padding:10px 12px}
 
   /* enquiry form → Google Sheet (via a Google Apps Script web app)
      Paste the web app URL from the Apps Script deployment between the quotes below. */
-  const SHEET_URL='';
+  const SHEET_URL='https://script.google.com/macros/s/AKfycbw_xv8FsH0eL9dx-RyTasBxxE2TVvpZuAXNBOeLVdNdQmLXunLS7sIPTC-S_Lj8pJZl/exec';
   const FALLBACK='Please email sales@enteratherapeutics.com or call +91 97462 19009.';
   $('#enqForm').addEventListener('submit',async e=>{
     e.preventDefault();const f=e.target,note=$('#formNote'),btn=$('button[type=submit]',f);
